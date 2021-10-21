@@ -5,7 +5,7 @@
     <div v-if="articles" class="space-y-10 mt-12">
       <PostCard
         v-for="article in articles"
-        :key="article.slug"
+        :key="article.id"
         :article="article"
       />
     </div>

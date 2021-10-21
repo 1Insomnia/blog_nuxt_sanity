@@ -15,7 +15,7 @@
     <!-- Post Card  Title + Dynamic Link -->
     <h3 class="heading-2 mb-4">
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+        :to="{ name: 'blog-slug', params: { slug: article.slug.current } }"
         class="text-foreground-dark font-bold no-underline hover:underline"
       >
         {{ article.title }}
@@ -24,14 +24,22 @@
     <!-- Post Card  Title + Dynamic Link -->
 
     <!-- Post Card Category -->
-    <h4 class="text-gray-700"># {{ article.category }}</h4>
+    <div>
+      <h4
+        class="text-gray-700"
+        v-for="category in article.categories"
+        :key="category.title"
+      >
+        # {{ category.title }}
+      </h4>
+    </div>
     <!-- Post Card Category -->
 
-    <!-- Post Card Excerpt -->
+    <!-- Post Card Exercpt -->
     <p class="paragraph-base text-gray-900">
-      {{ article.excerpt }}
+      {{ article.exercpt }}
     </p>
-    <!-- Post Card Excerpt -->
+    <!-- Post Card Exercpt -->
 
     <!-- Post Card Separator -->
     <hr class="bg-gray-300 mt-2 mb-4" />
@@ -41,7 +49,7 @@
     <div class="md:flex md:items-center md:justify-between">
       <!-- Post Card Dynamic Link -->
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+        :to="{ name: 'blog-slug', params: { slug: article.slug.current } }"
         class="hover:text-foreground-dark text-sm no-underline hover:underline"
       >
         Read this article →
@@ -50,7 +58,7 @@
 
       <!-- Post Card Date -->
       <div class="text-gray-900 text-sm mt-2 md:mt-0">
-        {{ article.date }}
+        {{ article._createdAt }}
       </div>
       <!-- Post Card Date -->
     </div>
