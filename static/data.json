@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Hello World!",
+    "category": "travel",
+    "excerpt": "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one",
+    "date": "21, September 2020",
+    "slug": "first-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Hello Second World!",
+    "category": "lifestyle",
+    "excerpt": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens",
+    "date": "26, September 2020",
+    "slug": "second-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Hello Third World!",
+    "category": "travel",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+    "date": "29, September 2020",
+    "slug": "third-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Blog Article",
+    "category": "food",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+    "date": "30, September 2020",
+    "slug": "fourth-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Another Blog Article",
+    "category": "travel",
+    "excerpt": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary",
+    "date": "30, September 2020",
+    "slug": "fith-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Le Random  Text",
+    "category": "dev",
+    "excerpt": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary",
+    "date": "30, September 2020",
+    "slug": "sixth-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.<br/>If your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n aIn addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Some Title",
+    "category": "dev",
+    "excerpt": "wrinkled front;And now, instead of mounting barded steedsTo fright the souls of fearful adversaries,He capers nimbly in a lady's chamberTo the lascivious pleasing of a lute.But I, that am not shaped for sportive tricks,Nor made to court an amorous looking-glass;I, that am rudely stamp'd, and want love's majestyTo strut before a wanton ambling nymph",
+    "date": "5, October 2020",
+    "slug": "kek-tv",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  },
+  {
+    "title": "Le Titre",
+    "category": "dev",
+    "excerpt": "nd war hath smooth'd his wreaths; Our bruised arms hung up for sportion, wrinkled front; And now, instead of our dreadful adversaries, He capers nimbly in a lute. But I, that am not shaped front; And now, instead of our brows bound with victorious summer by this wrinkled front; And all the clouds that love's majesty To strut before a want lour'd upon our dreadful marches to court an amorous pleasing barded stern alarumsto court an ambling of the ocean buried. Nor monuments;Our d",
+    "date": "5, October 2020",
+    "slug": "slug-post",
+    "body": "Starting today, you may use PHP 8.1 Release Candidates in your Vapor environments. To get started, simply specify php-8.1:al2 as your preferred runtime in your vapor.yml configuration file.\nIf your application is using Docker runtimes, we hope to release PHP 8.1 support for your environment within the next week or two. \n In addition, some Vapor features, PHP features, and PHP extensions may not work as expected when running environments on PHP 8.1. And of course, soon as PHP 8.1 receives a stable release, your environment will automatically start using PHP 8.1's stable version after a subsequent deployment. \n We hope you enjoy PHP 8.1 in your Vapor projects. At Laravel, we're committed to providing you with the most robust and developer-friendly PHP experience in the world. If you haven't checked out Vapor, now is a great time to start! You can create your account today at: vapor.laravel.com."
+  }
+]
