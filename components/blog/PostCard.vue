@@ -58,7 +58,7 @@
 
       <!-- Post Card Date -->
       <div class="text-gray-900 text-sm mt-2 md:mt-0">
-        {{ article._createdAt }}
+        {{ formatDate(article._createdAt) }}
       </div>
       <!-- Post Card Date -->
     </div>
@@ -74,6 +74,12 @@ export default {
     article: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" }
+      return new Date(date).toLocaleDateString("en", options)
     },
   },
 }

@@ -14,11 +14,6 @@
         <PostCardList :articles="articles" />
       </div>
     </section>
-    <section>
-      <pre>
-        {{ articles }}
-      </pre>
-    </section>
   </div>
 </template>
 <script>
