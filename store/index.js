@@ -1,3 +1,21 @@
+export const state = () => ({
+  articles: [],
+  categories: "",
+  activeCategory: "",
+})
+
+export const mutations = {
+  setArticles(state, articles) {
+    return (state.articles = articles)
+  },
+  setCategories(state, categories) {
+    return (state.categories = categories)
+  },
+  setActiveCategory(state, activeCategory) {
+    return (state.activeCategory = activeCategory)
+  },
+}
+
 // // Global state
 // export const state = () => ({
 //   article: {
