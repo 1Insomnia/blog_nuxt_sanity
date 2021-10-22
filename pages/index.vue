@@ -1,7 +1,7 @@
 <template>
   <div class="home-wrapper">
     <Hero />
-    <section class="py-10">
+    <section class="py-10" id="articles">
       <div class="container">
         <h2 class="heading-1 mb-10">Latest Articles</h2>
         <div class="text-lg text-grey-darkest leading-normal spaced-y-6">
@@ -25,7 +25,7 @@ import PostCardList from "~/components/blog/PostCardList.vue"
 export default {
   async asyncData({ $sanity }) {
     // Groq fetching all posts
-    const query = groq`*[_type == "post" ]{ title, slug, exercpt, publishedAt, categories[]->{title} }`
+    const query = groq`*[_type == "post" ][0...10]{ title, slug, exercpt, publishedAt, categories[]->{title} }`
     const articles = await $sanity.fetch(query)
     return { articles }
   },

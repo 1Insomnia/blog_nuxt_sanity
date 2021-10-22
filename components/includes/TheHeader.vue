@@ -1,5 +1,10 @@
 <template>
-  <header>
+  <header id="header">
+    <div
+      class="overlay"
+      :class="{ hidden: !showMenu, block: showMenu }"
+      @click="closeNavbar"
+    ></div>
     <nav
       class="
         fixed
@@ -13,6 +18,7 @@
         py-3
         shadow-lg
       "
+      id="navbar"
     >
       <div class="container flex flex-wrap items-center justify-between">
         <div
@@ -191,6 +197,23 @@ export default {
     toggleNavbar() {
       this.showMenu = !this.showMenu
     },
+    closeNavbar() {
+      this.showMenu = false
+    },
   },
 }
 </script>
+<style scoped>
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+
+  z-index: 40;
+
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+</style>
