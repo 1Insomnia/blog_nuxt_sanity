@@ -1,11 +1,18 @@
 <template>
-  <section class="py-10">
-    <div class="container mx-auto px-5 lg:max-w-screen-sm">
+  <section class="py-10 relative">
+    <!-- <div
+      v-if="$fetchState.pending"
+      class="container mx-auto px-5 lg:max-w-80-ch"
+    >
+      Fetching Article :)
+    </div>
+    <div v-else-if="$fetchState.error">An error occurred :(</div>-->
+    <div class="container mx-auto px-5 lg:max-w-80-ch">
       <h1 class="mb-5 heading-1 text-foreground-dark">
         {{ title }}
       </h1>
       <div class="flex items-center text-sm text-light text-foreground-light">
-        <span class="block">{{ formatDate(createdAt) }} </span>
+        <span class="block">{{ formatDate(publishedAt) }} </span>
         <span class="block" v-if="categories">&nbsp;— &nbsp;</span>
         <nuxt-link
           v-for="category in categories"
@@ -17,7 +24,8 @@
             no-underline
             hover:underline
           "
-          >#{{ category.title }}
+        >
+          #{{ category.title }}
         </nuxt-link>
       </div>
       <div class="mt-5 prose">
@@ -32,38 +40,34 @@ import { groq } from "@nuxtjs/sanity"
 import { SanityContent } from "@nuxtjs/sanity/dist/components/sanity-content"
 
 export default {
-  data() {
-    return {
-      title: "",
-      body: [],
-      createdAt: "",
-      categories: [],
-    }
-  },
-  async fetch() {
-    const query = groq`*[_type == "post" && slug.current == "${this.$route.params.slug}"][0]{title, _createdAt ,body, categories[]->{title} }`
-    const article = await this.$sanity.fetch(query)
-    const { title, body, _createdAt, categories } = article
+  async asyncData({ $sanity, params, error }) {
+    // Query : fetch article by slug
+    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, categories[]->{title} }`
 
-    this.title = title
-    this.body = body
-    this.createdAt = _createdAt
-    this.categories = categories
+    const article = await $sanity.fetch(query)
+
+    console.log(params.slug)
+
+    if (Object.entries(article).length === 0 && params.slug !== undefined) {
+      return error({
+        statusCode: 404,
+        message: `Post ${params.slug} not found`,
+      })
+    }
+
+    const { title, body, categories, publishedAt } = article
+
+    return { title, body, categories, publishedAt }
   },
   components: {
     SanityContent,
   },
   methods: {
     formatDate(date) {
+      if (!date) return
       const options = { year: "numeric", month: "long", day: "numeric" }
       return new Date(date).toLocaleDateString("en", options)
     },
   },
 }
 </script>
-
-<style scoped>
-.article {
-  white-space: pre-line;
-}
-</style>

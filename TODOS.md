@@ -1,4 +1,4 @@
 # TODOS
 
 ## Routes
-- [ ] : route validation for /blog/
+- [ x ] : route validation for /blog/

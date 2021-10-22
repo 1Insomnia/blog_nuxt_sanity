@@ -22,10 +22,10 @@ import { groq } from "@nuxtjs/sanity"
 import Hero from "@/components/includes/Hero.vue"
 import PostCardList from "~/components/blog/PostCardList.vue"
 
-// Groq fetching all posts
 export default {
   async asyncData({ $sanity }) {
-    const query = groq`*[_type == "post" ]{ title, slug, exercpt, _createdAt, categories[]->{title} }`
+    // Groq fetching all posts
+    const query = groq`*[_type == "post" ]{ title, slug, exercpt, publishedAt, categories[]->{title} }`
     const articles = await $sanity.fetch(query)
     return { articles }
   },

@@ -58,7 +58,7 @@
 
       <!-- Post Card Date -->
       <div class="text-gray-900 text-sm mt-2 md:mt-0">
-        {{ formatDate(article._createdAt) }}
+        {{ formatDate(article.publishedAt) }}
       </div>
       <!-- Post Card Date -->
     </div>
