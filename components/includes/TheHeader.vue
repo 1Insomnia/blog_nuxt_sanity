@@ -27,9 +27,7 @@
             relative
             flex
             justify-between
-            lg:w-auto
-            px-4
-            lg:static lg:block lg:justify-start
+            lg:w-auto lg:static lg:block lg:justify-start
           "
         >
           <!-- Brand Logo -->
@@ -168,7 +166,7 @@
                   text-foreground
                   hover:opacity-75
                 "
-                to="/"
+                to="/contact"
               >
                 Contact
               </nuxt-link>

@@ -1,6 +1,6 @@
 <template>
   <!-- Footer -->
-  <footer class="text-center bg-background-light">
+  <footer class="text-center bg-background-light pt-10">
     <div class="py-4">
       <!-- Section: Links -->
       <div class="text-center container">
