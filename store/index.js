@@ -2,67 +2,29 @@ export const state = () => ({
   articles: [],
   categories: "",
   activeCategory: "",
+  emailInfos: {
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  },
 })
 
 export const mutations = {
+  // Set All Articles
   setArticles(state, articles) {
     return (state.articles = articles)
   },
+  // Set All Categories
   setCategories(state, categories) {
     return (state.categories = categories)
   },
+  // Set One Category
   setActiveCategory(state, activeCategory) {
     return (state.activeCategory = activeCategory)
   },
+  // Set Mail Data
+  setEmailInfos(state, emailInfos) {
+    return (state.emailInfos = emailInfos)
+  },
 }
-
-// // Global state
-// export const state = () => ({
-//   article: {
-//     title: "",
-//     category: "",
-//     excerpt: "",
-//     body: "",
-//     slug: "",
-//     date: "",
-//   },
-//   articles: [],
-//   sanityArticles: [],
-// })
-
-// // Mutations
-// export const mutations = {
-//   setArticles(state, data) {
-//     state.articles = data
-//   },
-//   setArticle(state, article) {
-//     state.article = article
-//   },
-// }
-
-// // Actions
-// export const actions = {
-//   async dispatchArticles({ commit }) {
-//     try {
-//       const res = await fetch("http://localhost:3000/data.json")
-//       const data = await res.json()
-//       commit("setArticles", data)
-//     } catch (error) {
-//       console.error(error)
-//     }
-//   },
-//   async dispatchArticle({ commit }, slug) {
-//     try {
-//       // Fetch Data
-//       const res = await fetch("http://localhost:3000/data.json")
-//       const data = await res.json()
-
-//       // Filter & Return article by slug
-//       const [article] = data.filter((article) => article.slug === slug)
-//       // Commit article
-//       commit("setArticle", article)
-//     } catch (error) {
-//       console.error(error)
-//     }
-//   },
-// }

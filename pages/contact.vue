@@ -66,7 +66,6 @@
         <!-- Contact Form Container -->
         <div class="py-10 lg:w-2/3">
           <div class="lg:max-w-3xl lg:mx-auto">
-            <h2 class="heading-4 mb-8">Send me a message</h2>
             <ContactForm />
           </div>
         </div>

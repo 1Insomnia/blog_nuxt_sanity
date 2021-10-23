@@ -8,5 +8,11 @@
 
 ### Blog/Index
 
-- [ ] : add fetch categories and display them
-- [ ] : add select menu to filter by categories
+- [ x ] : add fetch categories and display them
+- [ x ] : add select menu to filter by categories
+
+### Category/\_slug
+
+### Sanity
+
+- [ ] : add slug for category

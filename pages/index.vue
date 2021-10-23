@@ -25,7 +25,7 @@ import PostCardList from "~/components/blog/PostCardList.vue"
 export default {
   async asyncData({ $sanity }) {
     // Groq fetching all posts
-    const query = groq`*[_type == "post" ][0...10]{ title, slug, exercpt, publishedAt, categories[]->{title} }`
+    const query = groq`*[_type == "post" ][0...10] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title} }`
     const articles = await $sanity.fetch(query)
     return { articles }
   },

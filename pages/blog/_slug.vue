@@ -1,12 +1,5 @@
 <template>
   <section class="py-10 relative">
-    <!-- <div
-      v-if="$fetchState.pending"
-      class="container mx-auto px-5 lg:max-w-80-ch"
-    >
-      Fetching Article :)
-    </div>
-    <div v-else-if="$fetchState.error">An error occurred :(</div>-->
     <div class="container mx-auto px-5 lg:max-w-80-ch">
       <h1 class="mb-5 heading-1 text-foreground-dark">
         {{ title }}
@@ -17,7 +10,7 @@
         <nuxt-link
           v-for="category in categories"
           :key="category.title"
-          to="https://blog.laravel.com/vapor"
+          :to="{ name: 'blog-category-slug', params: { slug: category.title } }"
           class="
             hover:text-foreground-dark
             text-sm
@@ -45,8 +38,6 @@ export default {
     const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, categories[]->{title} }`
 
     const article = await $sanity.fetch(query)
-
-    console.log(params.slug)
 
     if (Object.entries(article).length === 0 && params.slug !== undefined) {
       return error({

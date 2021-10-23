@@ -30,7 +30,10 @@
         v-for="category in article.categories"
         :key="category.title"
       >
-        # {{ category.title }}
+        <nuxt-link
+          :to="{ name: 'blog-category-slug', params: { slug: category.title } }"
+          ># {{ category.title }}</nuxt-link
+        >
       </h4>
     </div>
     <!-- Post Card Category -->
