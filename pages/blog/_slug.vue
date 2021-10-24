@@ -2,13 +2,13 @@
   <section class="py-10 relative">
     <div class="container mx-auto px-5 lg:max-w-80-ch">
       <h1 class="mb-5 heading-1 text-foreground-dark">
-        {{ title }}
+        {{ article.title }}
       </h1>
       <div class="flex items-center text-sm text-light text-foreground-light">
-        <span class="block">{{ formatDate(publishedAt) }} </span>
-        <span class="block" v-if="categories">&nbsp;— &nbsp;</span>
+        <span class="block">{{ formatDate(article.publishedAt) }} </span>
+        <span class="block" v-if="article.categories">&nbsp;— &nbsp;</span>
         <nuxt-link
-          v-for="category in categories"
+          v-for="category in article.categories"
           :key="category.title"
           :to="{ name: 'blog-category-slug', params: { slug: category.title } }"
           class="
@@ -22,7 +22,7 @@
         </nuxt-link>
       </div>
       <div class="mt-5 prose">
-        <SanityContent :blocks="body" />
+        <SanityContent :blocks="article.body" />
       </div>
     </div>
   </section>
@@ -32,13 +32,17 @@
 import { groq } from "@nuxtjs/sanity"
 import { SanityContent } from "@nuxtjs/sanity/dist/components/sanity-content"
 
+import { mapGetters } from "vuex"
+
 export default {
-  async asyncData({ $sanity, params, error }) {
+  async asyncData({ $sanity, params, error, store }) {
     // Query : fetch article by slug
     const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, categories[]->{title} }`
 
+    // Fetch Article
     const article = await $sanity.fetch(query)
 
+    // If No Data Return return 404
     if (Object.entries(article).length === 0 && params.slug !== undefined) {
       return error({
         statusCode: 404,
@@ -46,19 +50,26 @@ export default {
       })
     }
 
-    const { title, body, categories, publishedAt } = article
-
-    return { title, body, categories, publishedAt }
+    // Set Article in store
+    store.commit("setArticle", {
+      title: article.title,
+      body: article.body,
+      categories: article.categories,
+      publishedAt: article.publishedAt,
+    })
   },
   components: {
     SanityContent,
   },
   methods: {
     formatDate(date) {
-      if (!date) return
+      if (!date) return ""
       const options = { year: "numeric", month: "long", day: "numeric" }
       return new Date(date).toLocaleDateString("en", options)
     },
+  },
+  computed: {
+    ...mapGetters(["article"]),
   },
 }
 </script>

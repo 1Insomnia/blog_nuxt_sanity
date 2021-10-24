@@ -1,5 +1,5 @@
 <template>
-  <form action="#" class="px-10">
+  <form action="#" class="px-10" @submit.prevent="handleSubmit">
     <!-- Form Title -->
     <h2 class="heading-4 mb-8">Send me a message</h2>
     <!-- Form Title -->
@@ -13,7 +13,6 @@
         First name
       </label>
 
-      <span class="block text-sm text-mat-red mb-2"> {{ errors[0] }}</span>
       <input
         name="firstName"
         class="
@@ -26,10 +25,9 @@
           border-b-2 border-mat-grey
           focus:border-mat-blue-grey
         "
-        :class="{ 'border-mat-red': errors }"
         type="text"
         id="firstName"
-        v-model="emailInfos.firstName"
+        v-model="firstName"
         autofocus
       />
     </div>
@@ -43,7 +41,6 @@
       >
         Last name
       </label>
-      <span class="block text-sm text-mat-red mb-2"> {{ errors[0] }}</span>
       <input
         class="
           outline-none
@@ -57,7 +54,7 @@
         "
         type="text"
         id="lastName"
-        v-model="emailInfos.lastName"
+        v-model="lastName"
       />
     </div>
     <!-- Last Name Block -->
@@ -70,7 +67,6 @@
       >
         Email
       </label>
-      <span class="block text-sm text-mat-red mb-2"> {{ errors[0] }}</span>
       <input
         class="
           outline-none
@@ -84,7 +80,7 @@
         "
         type="email"
         id="email"
-        v-model="emailInfos.email"
+        v-model="email"
       />
     </div>
     <!-- Email Block -->
@@ -97,7 +93,6 @@
       >
         Message
       </label>
-      <span class="block text-sm text-mat-red mb-2"> {{ errors[0] }}</span>
       <textarea
         class="
           outline-none
@@ -110,6 +105,7 @@
           focus:border-mat-blue-grey
         "
         id="message"
+        v-model="message"
         cols="30"
         rows="5"
       ></textarea>
@@ -140,5 +136,45 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    firstName: {
+      get() {
+        return this.$store.state.emailInfos.firstName
+      },
+      set(value) {
+        return this.$store.commit("setFirstName", value)
+      },
+    },
+    lastName: {
+      get() {
+        return this.$store.state.emailInfos.lastName
+      },
+      set(value) {
+        return this.$store.commit("setLastName", value)
+      },
+    },
+    email: {
+      get() {
+        return this.$store.state.emailInfos.email
+      },
+      set(value) {
+        return this.$store.commit("setEmail", value)
+      },
+    },
+    message: {
+      get() {
+        return this.$store.state.emailInfos.message
+      },
+      set(value) {
+        return this.$store.commit("setMessage", value)
+      },
+    },
+  },
+  methods: {
+    handleSubmit() {
+      console.log(this.$store.state.emailInfos)
+    },
+  },
+}
 </script>

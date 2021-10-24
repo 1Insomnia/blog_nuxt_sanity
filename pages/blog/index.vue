@@ -1,6 +1,6 @@
 <template>
   <section class="py-10">
-    <div class="container">
+    <div class="container max-w-3xl">
       <h1 class="heading-1 mb-4">Latest Articles</h1>
       <SelectCategory :categories="categories" />
       <PostCardList :articles="articles" />

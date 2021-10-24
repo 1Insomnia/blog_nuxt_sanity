@@ -1,6 +1,12 @@
 export const state = () => ({
   articles: [],
-  categories: "",
+  article: {},
+  categories: {
+    title: "",
+    body: [],
+    categories: [],
+    publishedAt: "",
+  },
   activeCategory: "",
   emailInfos: {
     firstName: "",
@@ -11,6 +17,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+  setArticle(state, article) {
+    return (state.article = article)
+  },
   // Set All Articles
   setArticles(state, articles) {
     return (state.articles = articles)
@@ -24,7 +33,31 @@ export const mutations = {
     return (state.activeCategory = activeCategory)
   },
   // Set Mail Data
-  setEmailInfos(state, emailInfos) {
-    return (state.emailInfos = emailInfos)
+  setFirstName(state, firstName) {
+    return (state.emailInfos.firstName = firstName)
+  },
+  setLastName(state, lastName) {
+    return (state.emailInfos.lastName = lastName)
+  },
+  setEmail(state, email) {
+    return (state.emailInfos.email = email)
+  },
+  setMessage(state, message) {
+    return (state.emailInfos.message = message)
+  },
+}
+
+export const getters = {
+  // Get One Article
+  article(state) {
+    return state.article
+  },
+  // Get Multiple Articles
+  articles(state) {
+    return state.articles
+  },
+  // Get All Categories
+  catgories(state) {
+    return state.categories
   },
 }

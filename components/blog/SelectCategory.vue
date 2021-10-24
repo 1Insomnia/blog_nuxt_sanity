@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-md">
+  <div class="max-w-3xl">
     <label
       for="selectCategory"
       class="text-foreground-light font-semibold mb-2 block"
@@ -9,7 +9,7 @@
     <select
       name="selectCategory"
       id="selectCategory"
-      class="p-2 w-full block border border-gray-200"
+      class="py-3 px-2 w-full block border border-gray-200"
       v-model="category"
       @change="handleChange"
     >

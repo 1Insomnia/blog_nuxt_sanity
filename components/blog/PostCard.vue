@@ -15,7 +15,10 @@
     <!-- Post Card  Title + Dynamic Link -->
     <h3 class="heading-2 mb-4">
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: article.slug.current } }"
+        :to="{
+          name: 'blog-slug',
+          params: { slug: article.slug.current },
+        }"
         class="text-foreground-dark font-bold no-underline hover:underline"
       >
         {{ article.title }}
@@ -31,7 +34,10 @@
         :key="category.title"
       >
         <nuxt-link
-          :to="{ name: 'blog-category-slug', params: { slug: category.title } }"
+          :to="{
+            name: 'blog-category-slug',
+            params: { slug: category.slug },
+          }"
           ># {{ category.title }}</nuxt-link
         >
       </h4>
@@ -52,7 +58,10 @@
     <div class="md:flex md:items-center md:justify-between">
       <!-- Post Card Dynamic Link -->
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: article.slug.current } }"
+        :to="{
+          name: 'blog-slug',
+          params: { slug: article.slug.current },
+        }"
         class="hover:text-foreground-dark text-sm no-underline hover:underline"
       >
         Read this article →
