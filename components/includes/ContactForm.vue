@@ -1,5 +1,5 @@
 <template>
-  <form action="#" class="px-10" @submit.prevent="handleSubmit">
+  <form action="#" class="lg:px-10" @submit.prevent="handleSubmit">
     <!-- Form Title -->
     <h2 class="heading-4 mb-8">Send me a message</h2>
     <!-- Form Title -->

@@ -1,7 +1,7 @@
 <template>
   <section class="py-10">
     <div class="container mx-auto px-5 lg:max-w-80-ch">
-      <h1 class="mb-12 heading-1">Category : {{ title }}</h1>
+      <h1 class="mb-10 heading-1">Category : {{ title }}</h1>
       <PostCardList :articles="articles" />
     </div>
   </section>

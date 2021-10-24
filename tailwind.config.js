@@ -64,6 +64,8 @@ module.exports = {
       backgroundImage: {
         "hero-pattern":
           "linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('~/assets/img/homepage/hero-alt.jpg')",
+        "contact-pattern":
+          "linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.7)), url('~/assets/img/contact.png')",
       },
     },
   },

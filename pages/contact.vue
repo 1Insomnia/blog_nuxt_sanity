@@ -3,7 +3,7 @@
     <!--  -->
     <!-- Showcase Container -->
     <div class="container pb-10 lg:pb-12">
-      <h1 class="heading-1 mb-4 text-foreground-dark">Get In Touch</h1>
+      <h1 class="heading-1 mb-10 text-foreground-dark">Get In Touch</h1>
       <p class="leading-relaxed">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
         quaerat obcaecati. Ut, quibusdam magnam? Cupiditate similique unde
@@ -15,8 +15,15 @@
     <div class="container">
       <div class="lg:flex lg:shadow-lg">
         <!-- Contact Information Container -->
-        <div class="bg-mat-blue-grey text-white py-10 md:pt-10">
-          <div class="container">
+        <div
+          class="
+            bg-contact-pattern bg-cover bg-center bg-no-repeat
+            text-white
+            py-10
+            md:pt-10
+          "
+        >
+          <div class="container lg:px-10">
             <h2 class="heading-4 mb-6 lg:mb-8">Contact Information</h2>
             <p class="mb-6 lg:mb-8">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,

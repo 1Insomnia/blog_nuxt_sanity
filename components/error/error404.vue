@@ -1,15 +1,24 @@
 <template>
-  <div class="h-full">
-    <h1 class="heading-1 text-mat-red text-center">404</h1>
-    <h2 class="text-mat-red text-center text-xl mb-4">{{ error.message }}</h2>
-    <nuxt-link class="block mt-10 animate-pulse" to="/">
-      <h3 class="mb-4 text-center">Click on me to go back home</h3>
+  <div
+    class="min-h-screen-full py-10 lg:flex lg:items-center lg:justify-center"
+  >
+    <div class="lg:flex lg:items-center lg:gap-12">
+      <div class="mb-4">
+        <h1 class="heading-1 text-center">404</h1>
+        <h2 class="text-center text-xl">{{ error.message }}</h2>
+        <nuxt-link class="block mt-10" to="/">
+          <h3 class="mb-4 text-center">
+            This article doesn't exist but we have plenty more on thehomepage
+            <span class="text-mat-blue">homepage</span> !
+          </h3>
+        </nuxt-link>
+      </div>
       <img
-        class="object-fit mx-auto"
-        src="~/assets/img/error/doge.png"
+        class="object-fit max-w-lg bg-background mx-auto"
+        src="~/assets/img/work.png"
         alt=""
       />
-    </nuxt-link>
+    </div>
   </div>
 </template>
 

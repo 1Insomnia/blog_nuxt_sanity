@@ -1,7 +1,7 @@
 <template>
   <section class="py-10">
     <div class="container">
-      <h1 class="heading-1 mb-12">About</h1>
+      <h1 class="heading-1 mb-10">About</h1>
       <div class="lg:flex lg:gap-12">
         <div class="mb-12 lg:mb-0 lg:w-1/2">
           <p class="mb-8">
