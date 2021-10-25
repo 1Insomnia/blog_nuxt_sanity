@@ -1,10 +1,8 @@
 <template>
-  <section class="py-10">
-    <div class="container max-w-3xl">
-      <h1 class="heading-1 mb-10">Latest Articles</h1>
-      <SelectCategory :categories="categories" />
-      <PostCardList :articles="articles" />
-    </div>
+  <section class="py-8 md:py-12 lg:py-16">
+    <h1 class="mb-10 text-center">Latest Articles</h1>
+    <SelectCategory :categories="categories" />
+    <PostCardList :articles="articles" />
   </section>
 </template>
 

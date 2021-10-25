@@ -1,7 +1,7 @@
 <template>
-  <section class="py-10 relative">
-    <div class="container mx-auto px-5 lg:max-w-80-ch">
-      <h1 class="mb-10 heading-1 text-foreground-dark">
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container lg:max-w-80-ch">
+      <h1 class="mb-10">
         {{ article.title }}
       </h1>
       <div class="flex items-center text-sm text-light text-foreground-light">

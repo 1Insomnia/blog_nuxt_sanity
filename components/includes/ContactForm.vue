@@ -21,7 +21,7 @@
           w-full
           py-3
           px-2
-          bg-mat-grey-light
+          bg-mat-grey
           border-b-2 border-mat-grey
           focus:border-mat-blue-grey
         "

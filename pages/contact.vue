@@ -1,9 +1,9 @@
 <template>
-  <section class="py-10">
+  <section class="py-8 md:py-12 lg:py-16">
     <!--  -->
     <!-- Showcase Container -->
     <div class="container pb-10 lg:pb-12">
-      <h1 class="heading-1 mb-10 text-foreground-dark">Get In Touch</h1>
+      <h1 class="mb-10">Get In Touch</h1>
       <p class="leading-relaxed">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
         quaerat obcaecati. Ut, quibusdam magnam? Cupiditate similique unde

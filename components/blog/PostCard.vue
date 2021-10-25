@@ -13,7 +13,7 @@
     "
   >
     <!-- Post Card  Title + Dynamic Link -->
-    <h3 class="heading-2 mb-4">
+    <h3 class="mb-4">
       <nuxt-link
         :to="{
           name: 'blog-slug',
@@ -45,7 +45,7 @@
     <!-- Post Card Category -->
 
     <!-- Post Card Exercpt -->
-    <p class="paragraph-base text-gray-900">
+    <p class="text-gray-900">
       {{ article.exercpt }}
     </p>
     <!-- Post Card Exercpt -->

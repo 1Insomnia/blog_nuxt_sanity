@@ -1,177 +1,207 @@
 <template>
-  <header id="header">
-    <div
-      class="overlay"
-      :class="{ hidden: !showMenu, block: showMenu }"
-      @click="closeNavbar"
-    ></div>
-    <nav
-      class="
-        fixed
-        z-50
-        w-full
-        bg-background
-        top-0
-        flex flex-wrap
-        items-center
-        justify-between
-        py-3
-        shadow-lg
-      "
-      id="navbar"
-    >
-      <div class="container flex flex-wrap items-center justify-between">
-        <div
-          class="
-            w-full
-            relative
-            flex
-            justify-between
-            lg:w-auto lg:static lg:block lg:justify-start
-          "
-        >
-          <!-- Brand Logo -->
-          <nuxt-link
-            class="
-              text-sm
-              font-bold
-              leading-relaxed
-              inline-block
-              mr-4
-              py-2
-              foregroundspace-nowrap
-              uppercase
-              text-foreground
-            "
-            to="/"
-          >
-            Nux <span class="text-success">Blog</span>
-          </nuxt-link>
-          <!-- Nav Toggle -->
-          <button
-            class="
-              cursor-pointer
-              text-xl
-              leading-none
-              px-4
-              py-1
-              border border-solid border-transparent
-              rounded
-              bg-transparent
-              block
-              lg:hidden
-              outline-none
-              focus:outline-none
-              transform
-              transition
-              duration-300
-              ease-linear
-              text-success
-            "
-            :class="{ 'rotate-180': !showMenu }"
-            type="button"
-            @click="toggleNavbar()"
-          >
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              shape-rendering="geometricPrecision"
-              class="w-6 h-6"
+  <header class="fixed top-0 left-0 w-full shadow-lg" id="header">
+    <nav class="bg-background-light">
+      <div class="container">
+        <div class="relative flex items-center justify-between h-20">
+          <!-- Nav button container -->
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              @click.prevent="toggleNav"
+              class="
+                inline-flex
+                items-center
+                justify-center
+                p-2
+                rounded-md
+                text-foreground
+                hover:text-foreground-dark
+                focus:outline-none
+              "
+              aria-controls="mobile-menu"
+              aria-expanded="false"
             >
-              <path
-                d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"
-              ></path>
-            </svg>
-          </button>
+              <svg
+                class="h-6 w-6"
+                :class="{ hidden: showMenu }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+              <svg
+                class="h-6 w-6"
+                :class="{ hidden: !showMenu }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+              <span class="sr-only">Open main menu</span>
+            </button>
+          </div>
+          <!-- Flex wrapper desktop nav -->
+          <div
+            class="
+              flex-1 flex
+              items-center
+              justify-center
+              sm:items-stretch sm:justify-between
+            "
+          >
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center font-bold">
+              Nux Blog
+            </div>
+            <!-- Nav Desktop -->
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <nuxt-link
+                  to="/"
+                  class="
+                    text-foreground
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    uppercase
+                    font-medium
+                  "
+                  aria-current="page"
+                  >Home</nuxt-link
+                >
+                <nuxt-link
+                  to="/blog"
+                  class="
+                    text-foreground
+                    hover:text-foreground-dark
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    uppercase
+                    font-medium
+                  "
+                  >Blog</nuxt-link
+                >
+
+                <nuxt-link
+                  to="/about"
+                  class="
+                    text-foreground
+                    hover:text-foreground-dark
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    uppercase
+                    font-medium
+                  "
+                  >About</nuxt-link
+                >
+                <nuxt-link
+                  to="/contact"
+                  class="
+                    text-foreground
+                    hover:text-foreground-dark
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                    uppercase
+                  "
+                  >Contact</nuxt-link
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Nav List Wrapper -->
-        <div
-          :class="{ hidden: !showMenu, flex: showMenu }"
-          class="transform lg:flex lg:flex-grow items-center"
-        >
-          <!-- Nav List -->
-          <ul class="py-4 flex flex-col lg:flex-row list-none ml-auto">
-            <li class="nav-item">
-              <nuxt-link
-                class="
-                  px-4
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-foreground
-                  hover:opacity-75
-                "
-                to="/"
-              >
-                Home
-              </nuxt-link>
-            </li>
-            <li class="nav-item">
-              <nuxt-link
-                class="
-                  px-4
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-foreground
-                  hover:opacity-75
-                "
-                to="/blog"
-              >
-                Blog
-              </nuxt-link>
-            </li>
-            <li class="nav-item">
-              <nuxt-link
-                class="
-                  px-4
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-foreground
-                  hover:opacity-75
-                "
-                to="/about"
-              >
-                About
-              </nuxt-link>
-            </li>
-            <li class="nav-item">
-              <nuxt-link
-                class="
-                  px-4
-                  py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                  leading-snug
-                  text-foreground
-                  hover:opacity-75
-                "
-                to="/contact"
-              >
-                Contact
-              </nuxt-link>
-            </li>
-          </ul>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div
+        :class="[{ block: showMenu }, { hidden: !showMenu }]"
+        class="mobile-nav sm:hidden shadow-lg h-screen-full"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <nuxt-link
+            to="/"
+            class="
+              text-foreground
+              block
+              px-3
+              uppercase
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            aria-current="page"
+            >Home</nuxt-link
+          >
+
+          <nuxt-link
+            to="/blog"
+            class="
+              text-foreground
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+              uppercase
+            "
+            >Blog</nuxt-link
+          >
+
+          <nuxt-link
+            to="/about"
+            class="
+              text-foreground
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              uppercase
+              font-medium
+            "
+            >About</nuxt-link
+          >
+
+          <nuxt-link
+            to="/contact"
+            class="
+              text-foreground
+              block
+              px-3
+              py-2
+              rounded-md
+              uppercase
+              text-base
+              font-medium
+            "
+            >Contact</nuxt-link
+          >
         </div>
       </div>
     </nav>
@@ -192,26 +222,28 @@ export default {
     },
   },
   methods: {
-    toggleNavbar() {
+    toggleNav() {
       this.showMenu = !this.showMenu
     },
-    closeNavbar() {
+    closeNav() {
       this.showMenu = false
     },
   },
 }
 </script>
 <style scoped>
+#header {
+  z-index: 1000;
+}
+
 .overlay {
   position: fixed;
   height: 100vh;
   width: 100%;
 
-  z-index: 40;
+  z-index: 50;
 
   top: 0;
   left: 0;
-
-  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>

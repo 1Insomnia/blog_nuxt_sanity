@@ -1,6 +1,6 @@
 <template>
   <!-- Post Card List Outter Wrapper -->
-  <div>
+  <div class="container lg:max-w-screen-md">
     <!-- Post Card Wrapper + Loop -->
     <div v-if="articles" class="space-y-10 mt-12">
       <PostCard

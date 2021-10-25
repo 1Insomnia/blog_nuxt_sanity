@@ -1,9 +1,9 @@
 <template>
   <div class="home-wrapper">
     <Hero />
-    <section class="py-10" id="articles">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="heading-1 mb-10 text-center">Latest Articles</h2>
+    <section class="py-8 md:py-12 lg:py-16" id="articles">
+      <div class="container lg:max-w-screen-md">
+        <h2 class="mb-10 text-center">Latest Articles</h2>
         <div class="text-lg text-grey-darkest leading-normal spaced-y-6">
           <p>
             Over the years I’ve published a few dozen articles — some more
@@ -11,8 +11,8 @@
           </p>
           <p>Here are some of my personal favorites.</p>
         </div>
-        <PostCardList :articles="articles" />
       </div>
+      <PostCardList :articles="articles" />
     </section>
   </div>
 </template>
@@ -38,6 +38,10 @@ export default {
   components: {
     PostCardList,
     Hero,
+  },
+  transition: {
+    name: "test",
+    mode: "out-in",
   },
 }
 </script>

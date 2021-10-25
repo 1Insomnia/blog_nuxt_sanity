@@ -17,17 +17,16 @@ export default {
     TheHeader,
     TheFooter,
   },
+
+  layoutTransition: {
+    name: "layout",
+    mode: "out-in",
+  },
 }
 </script>
 
 <style scoped>
 .main {
-  padding-top: 62px;
-}
-
-@media screen and (min-width: 1024px) {
-  .main {
-    padding-top: 88px;
-  }
+  padding-top: 80px;
 }
 </style>

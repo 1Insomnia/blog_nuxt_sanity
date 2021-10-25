@@ -18,6 +18,12 @@ module.exports = {
       },
     },
     extend: {
+      height: {
+        "screen-full": "calc(100vh - 80px)"
+      },
+      minHeight: {
+        "screen-full": "calc(100vh - 80px)"
+      },
       colors: {
         foreground: {
           DEFAULT: "#212121",

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl">
+  <div class="container lg:max-w-screen-md">
     <label
       for="selectCategory"
       class="text-foreground-light font-semibold mb-2 block"
@@ -13,7 +13,7 @@
       v-model="category"
       @change="handleChange"
     >
-      <option value="all" selected>All</option>
+      <option value="all">All</option>
       <option
         :value="category.title"
         v-for="category in categories"
@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      category: "",
+      category: "all",
     }
   },
   name: "SelectCategory",
@@ -42,6 +42,11 @@ export default {
   methods: {
     handleChange() {
       this.$store.commit("setActiveCategory", this.category)
+    },
+  },
+  watch: {
+    $route() {
+      this.category = "all"
     },
   },
 }
