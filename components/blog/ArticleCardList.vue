@@ -19,10 +19,9 @@
 </template>
 
 <script>
-import PostCard from "@/components/blog/PostCard.vue"
+import PostCard from "~/components/blog/ArticleCard.vue"
 
 export default {
-  name: "PostCardList",
   components: {
     PostCard,
   },

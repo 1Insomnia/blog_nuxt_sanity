@@ -2,13 +2,13 @@
   <section class="py-8 md:py-12 lg:py-16">
     <h1 class="mb-10 text-center">Latest Articles</h1>
     <SelectCategory :categories="categories" />
-    <PostCardList :articles="articles" />
+    <AritcleCardList :articles="articles" />
   </section>
 </template>
 
 <script>
 import { groq } from "@nuxtjs/sanity"
-import PostCardList from "~/components/blog/PostCardList.vue"
+import ArticleCardList from "~/components/blog/ArticleCardList.vue"
 import SelectCategory from "~/components/blog/SelectCategory.vue"
 
 import { mapState } from "vuex"
@@ -26,7 +26,7 @@ export default {
     store.commit("setCategories", categories)
   },
   components: {
-    PostCardList,
+    ArticleCardList,
     SelectCategory,
   },
   computed: {

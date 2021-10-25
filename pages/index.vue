@@ -20,7 +20,7 @@
 import { groq } from "@nuxtjs/sanity"
 
 import Hero from "@/components/includes/Hero.vue"
-import PostCardList from "~/components/blog/PostCardList.vue"
+import PostCardList from "~/components/blog/ArticleCardList.vue"
 
 import { mapGetters } from "vuex"
 

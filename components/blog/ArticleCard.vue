@@ -81,7 +81,6 @@
 
 <script>
 export default {
-  name: "PostCard",
   props: {
     article: {
       type: Object,

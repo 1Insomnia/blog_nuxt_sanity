@@ -2,7 +2,7 @@
   <section class="py-8 md:py-12 lg:py-16">
     <div class="container lg:max-w-80-ch">
       <h1 class="mb-10">Category : {{ title }}</h1>
-      <PostCardList :articles="articles" />
+      <ArticleCardList :articles="articles" />
     </div>
   </section>
 </template>
@@ -11,7 +11,7 @@
 import { groq } from "@nuxtjs/sanity"
 import { mapGetters } from "vuex"
 
-import PostCardList from "@/components/blog/PostCardList.vue"
+import ArticleCardList from "~/components/blog/ArticleCardList.vue"
 
 export default {
   async asyncData({ $sanity, params, error, store }) {
@@ -32,7 +32,7 @@ export default {
     store.commit("setArticles", articles)
   },
   components: {
-    PostCardList,
+    ArticleCardList,
   },
   methods: {
     // Method to format published data

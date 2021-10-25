@@ -18,11 +18,15 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        "inset-1": "inset 0 2px 4px 0 rgb(206 209 224 / 20%)"
+      },
       height: {
         "screen-full": "calc(100vh - 80px)"
       },
       minHeight: {
-        "screen-full": "calc(100vh - 80px)"
+        "screen-full": "calc(100vh - 80px)",
+        120: "120px",
       },
       colors: {
         foreground: {
@@ -59,6 +63,9 @@ module.exports = {
           black: "#000000",
           white: "#FFFFFF",
         },
+        accent: {
+          1: "#eaeaea"
+        }
       },
       maxWidth: {
         "80-ch": "80ch",

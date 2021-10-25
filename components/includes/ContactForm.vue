@@ -1,116 +1,92 @@
 <template>
-  <form action="#" class="lg:px-10" @submit.prevent="handleSubmit">
+  <form
+    class="max-w-xl mx-auto lg:mx-0"
+    action="#"
+    @submit.prevent="handleSubmit"
+  >
     <!-- Form Title -->
-    <h2 class="heading-4 mb-8">Send me a message</h2>
-    <!-- Form Title -->
+    <h2 class="sr-only">Contact Form</h2>
 
-    <!-- First Name Block -->
+    <!-- Full Name Block -->
     <div class="mb-4">
-      <label
-        class="block mb-2 text-foreground-dark font-semibold lg:mb-4"
-        for="firstName"
-      >
-        First name
+      <label class="block mb-2 text-foreground-dark lg:mb-4" for="firstName">
+        Full Name
       </label>
-
       <input
-        name="firstName"
         class="
+          appearance-none
           outline-none
+          focus:outline-none
           block
           w-full
-          py-3
-          px-2
-          bg-mat-grey
-          border-b-2 border-mat-grey
-          focus:border-mat-blue-grey
+          h-12
+          px-4
+          bg-white
+          border border-accent-1
+          rounded
+          shadow-inset-1
+          focus:border-mat-light-blue
         "
+        name="fullName"
         type="text"
-        id="firstName"
-        v-model="firstName"
+        id="fullName"
+        placeholder="What's your fullname ?"
         autofocus
       />
     </div>
-    <!-- First Name Block -->
-
-    <!-- Last Name Block -->
-    <div class="mb-4">
-      <label
-        class="block text-foreground-dark font-semibold lg:mb-4"
-        for="lastName"
-      >
-        Last name
-      </label>
-      <input
-        class="
-          outline-none
-          block
-          w-full
-          py-3
-          px-2
-          bg-mat-grey-light
-          border-b-2 border-mat-grey
-          focus:border-mat-blue-grey
-        "
-        type="text"
-        id="lastName"
-        v-model="lastName"
-      />
-    </div>
-    <!-- Last Name Block -->
 
     <!-- Email Block -->
     <div class="mb-4">
-      <label
-        class="mb-2 block text-foreground-dark font-semibold lg:mb-4"
-        for="email"
-      >
+      <label class="block mb-2 text-foreground-dark lg:mb-4" for="email">
         Email
       </label>
       <input
         class="
+          appearance-none
           outline-none
+          focus:outline-none
           block
           w-full
-          py-3
-          px-2
-          bg-mat-grey-light
-          border-b-2 border-mat-grey
-          focus:border-mat-blue-grey
+          h-12
+          px-4
+          bg-white
+          border border-accent-1
+          rounded
+          shadow-inset-1
+          focus:border-mat-light-blue
         "
         type="email"
         id="email"
-        v-model="email"
+        placeholder="you@example.com"
       />
     </div>
-    <!-- Email Block -->
 
     <!-- Message Block -->
     <div class="mb-8">
-      <label
-        class="block text-foreground-dark font-semibold mb-2 lg:mb-4"
-        for="message"
-      >
+      <label class="block text-foreground-dark mb-2 lg:mb-4" for="message">
         Message
       </label>
       <textarea
         class="
+          appearance-none
           outline-none
+          focus:outline-none
           block
           w-full
-          py-3
-          px-2
-          bg-mat-grey-light
-          border-b-2 border-mat-grey
-          focus:border-mat-blue-grey
+          h-12
+          pt-4
+          px-4
+          bg-white
+          border border-accent-1
+          rounded
+          shadow-inset-1
+          focus:border-mat-light-blue
+          min-h-120
         "
         id="message"
-        v-model="message"
-        cols="30"
-        rows="5"
+        placeholder="Your message"
       ></textarea>
     </div>
-    <!-- Message Block -->
 
     <!-- Btn Submit Block -->
     <div>
@@ -119,13 +95,13 @@
         role="button"
         class="
           inline-block
-          px-6
-          py-3
+          py-4
           uppercase
           font-light
-          bg-mat-blue-grey
+          bg-mat-blue
           text-white text-sm
           rounded
+          w-full
         "
       >
         Send Message
