@@ -1,23 +1,28 @@
 <template>
-  <div
-    class="min-h-screen-full py-10 lg:flex lg:items-center lg:justify-center"
-  >
-    <div class="lg:flex lg:items-center lg:gap-12">
-      <div class="mb-4">
-        <h1 class="heading-1 text-center">404</h1>
-        <h2 class="text-center text-xl">{{ error.message }}</h2>
-        <nuxt-link class="block mt-10" to="/">
-          <h3 class="mb-4 text-center">
-            This article doesn't exist but we have plenty more on thehomepage
+  <div class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="">
+        <!-- Image Container -->
+        <h1 class="text-center md:hidden text-mat-blue">404</h1>
+        <div class="hidden md:block md:mb-10">
+          <img
+            class="object-fit max-w-lg bg-background mx-auto"
+            src="~/assets/img/error/404.png"
+            alt=""
+          />
+        </div>
+        <!-- Message Container -->
+        <div class="">
+          <!-- Title -->
+          <!-- Error Message -->
+          <h1 class="text-center mb-4">{{ error.message }}</h1>
+          <!-- Link to homepage -->
+          <nuxt-link class="block text-center" to="/">
+            However we have plenty more content on the
             <span class="text-mat-blue">homepage</span> !
-          </h3>
-        </nuxt-link>
+          </nuxt-link>
+        </div>
       </div>
-      <img
-        class="object-fit max-w-lg bg-background mx-auto"
-        src="~/assets/img/work.png"
-        alt=""
-      />
     </div>
   </div>
 </template>
