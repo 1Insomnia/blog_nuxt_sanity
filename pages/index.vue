@@ -41,6 +41,7 @@ export default {
 
     // Commit data to vuex store
     store.commit("setArticles", articles);
+    console.log(store.state.articles[0].categories[0].slug.current);
   },
   head() {
     return {

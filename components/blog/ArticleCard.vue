@@ -42,7 +42,7 @@
         <nuxt-link
           :to="{
             name: 'blog-category-slug',
-            params: { slug: category.slug },
+            params: { slug: category.slug.current },
           }"
           ># {{ category.title }}</nuxt-link
         >

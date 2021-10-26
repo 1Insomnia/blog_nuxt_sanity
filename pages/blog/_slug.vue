@@ -43,7 +43,7 @@ export default {
   },
   async asyncData({ $sanity, params, error, store }) {
     // Query : fetch article by slug
-    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, mainImage, categories[]->{title} }`;
+    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, mainImage, categories[]->{title, slug} }`;
 
     // Fetch Article
     const article = await $sanity.fetch(query);

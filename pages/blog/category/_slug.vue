@@ -19,7 +19,7 @@ export default {
   },
   async asyncData({ $sanity, params, error, store }) {
     // Query to fetch one article by category slug
-    const queryArticlesByCategory = groq`*[_type == "post"  && "${params.slug}" in categories[]->slug.current]{ title, slug, exercpt, publishedAt, categories[]->{title} }`;
+    const queryArticlesByCategory = groq`*[_type == "post"  && "${params.slug}" in categories[]->slug.current]{ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`;
 
     // Fetch data from sanity repo
     const articles = await $sanity.fetch(queryArticlesByCategory);
@@ -51,10 +51,7 @@ export default {
     ...mapGetters(["articles"]),
     // Return title of the category
     title() {
-      if (this.articles[0].categories[0].title) {
-        return this.articles[0].categories[0].title;
-      }
-      return "";
+      return this.articles[0].categories[0].title;
     },
   },
   methods: {

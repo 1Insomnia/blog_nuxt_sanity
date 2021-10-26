@@ -19,7 +19,7 @@ export default {
   },
   async asyncData({ $sanity, store }) {
     // Groq query =  all posts ordered by desc
-    const queryArticles = groq`*[_type == "post" ] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title} }`;
+    const queryArticles = groq`*[_type == "post" ] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`;
 
     // Groq query = all categories
     const queryCategories = groq`*[_type == "category"]`;
@@ -54,7 +54,7 @@ export default {
     async activeCategory() {
       // Store groq query inside a variable
       // Default : return all documents which type = post
-      let queryArticles = groq`*[_type == "post"] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title} }`;
+      let queryArticles = groq`*[_type == "post"] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`;
 
       if (this.activeCategory === "all") {
         // If selected value = all then fetch all articles
@@ -63,7 +63,7 @@ export default {
         this.$store.commit("setArticles", articles);
       } else {
         // Query change to fetch all articles by category selected
-        queryArticles = groq`*[_type == "post"  && "${this.activeCategory}" in categories[]->title]{ title, slug, exercpt, publishedAt, categories[]->{title} }`;
+        queryArticles = groq`*[_type == "post"  && "${this.activeCategory}" in categories[]->title]{ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`;
         // Fetch Data
         const articles = await this.$sanity.fetch(queryArticles);
         // Commit data to vuex store
