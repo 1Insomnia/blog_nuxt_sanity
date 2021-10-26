@@ -1,27 +1,13 @@
 <template>
-  <section class="py-8 md:py-12 lg:py-16">
+  <section class="py-60 md:py-90 lg:py-120">
     <!-- Container Form + Image -->
-    <div class="pb-4 md:pb-6 lg:pb-8">
-      <div class="container">
-        <div class="lg:flex lg:flex-row-reverse">
-          <div class="mb-10 lg:w-1/2 lg:p-5 lg:flex lg:items-center lg:mb-0">
-            <img
-              class="object-cover mx-auto"
-              style="max-height: 350px"
-              src="~/assets/img/work.png"
-              alt=""
-            />
-          </div>
-          <div class="lg:w-1/2 lg:p-5">
-            <h1 class="text-center mb-10 lg:text-left">Contact Me</h1>
-            <ContactForm />
-          </div>
-        </div>
+    <div class="container lg:flex lg:items-center">
+      <div class="pb-4 md:pb-6 lg:pb-8 lg:w-1/2">
+        <h1 class="text-center mb-10 lg:text-left">Contact Me</h1>
+        <ContactForm />
       </div>
-    </div>
-    <!-- Container Informations -->
-    <div class="pt-4 md:pt-6 lg:pt-8">
-      <div class="container">
+      <!-- Container Informations -->
+      <div class="pt-4 md:pt-6 lg:w-1/2">
         <!-- Contact Informations Card -->
         <div
           class="
@@ -96,6 +82,7 @@
               </svg>
               <p>myemail@domain.com</p>
             </div>
+            <SocialLinks class="mt-4" />
           </div>
         </div>
       </div>

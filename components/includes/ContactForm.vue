@@ -25,7 +25,7 @@
           border border-accent-1
           rounded
           shadow-inset-1
-          focus:border-mat-light-blue
+          focus:border-blue
         "
         name="fullName"
         type="text"
@@ -53,7 +53,7 @@
           border border-accent-1
           rounded
           shadow-inset-1
-          focus:border-mat-light-blue
+          focus:border-blue
         "
         type="email"
         id="email"
@@ -80,7 +80,7 @@
           border border-accent-1
           rounded
           shadow-inset-1
-          focus:border-mat-light-blue
+          focus:border-blue
           min-h-120
         "
         id="message"
@@ -98,15 +98,15 @@
           py-4
           uppercase
           font-light
-          bg-mat-blue
+          bg-blue
           text-white text-sm
           rounded
           w-full
-          border border-mat-blue
+          border border-blue
           transition
           duration-300
           ease-in
-          hover:bg-white hover:text-mat-blue
+          hover:bg-white hover:text-blue
         "
       >
         Send Message

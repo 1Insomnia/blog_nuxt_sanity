@@ -1,13 +1,27 @@
 <template>
   <!-- Footer -->
-  <footer class="text-center bg-background-light pt-10">
+  <footer class="text-center bg-background-light py-60">
     <div class="py-4">
       <!-- Section: Links -->
       <div class="text-center container">
-        <nuxt-link class="px-2" to="/">Home</nuxt-link>
-        <nuxt-link class="px-2" to="/">Blog</nuxt-link>
-        <nuxt-link class="px-2" to="/">About</nuxt-link>
-        <nuxt-link class="px-2" to="/">Contact</nuxt-link>
+        <nuxt-link class="px-2 transition duration-300 hover:text-blue" to="/"
+          >Home</nuxt-link
+        >
+        <nuxt-link
+          class="px-2 transition duration-300 hover:text-blue"
+          to="/blog"
+          >Blog</nuxt-link
+        >
+        <nuxt-link
+          class="px-2 transition duration-300 hover:text-blue"
+          to="/about"
+          >About</nuxt-link
+        >
+        <nuxt-link
+          class="px-2 transition duration-300 hover:text-blue"
+          to="/contact"
+          >Contact</nuxt-link
+        >
       </div>
 
       <!-- Section: Links -->
@@ -30,35 +44,56 @@
       <!-- Social Link Facebook -->
       <div class="lg:flex lg:items-center lg:justify-between mt-12 container">
         <div class="flex items-center justify-center">
-          <nuxt-link to="/" class="text-dark px-2">
+          <!-- Social Link Facebook -->
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="text-dark px-2 transition duration-300 hover:text-blue"
+            aria-label="open external link to facebook"
+          >
             <span class="sr-only">Facebook</span>
-            <icon-facebook width="24" height="24"></icon-facebook>
-          </nuxt-link>
+            <icon-facebook></icon-facebook>
+          </a>
+
           <!-- Social Link Twitter -->
-          <nuxt-link to="/" class="text-dark px-2">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="open external link to twitter"
+            class="text-dark px-2 transition duration-300 hover:text-blue"
+          >
             <span class="sr-only">Twitter</span>
-            <icon-twitter width="24" height="24"></icon-twitter>
-          </nuxt-link>
+            <icon-twitter></icon-twitter>
+          </a>
+
           <!-- Social Link Linkedin -->
-          <nuxt-link to="/" class="text-dark px-2">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            aria-label="open external link to linkedin"
+            class="text-dark px-2 transition duration-300 hover:text-blue"
+          >
             <span class="sr-only">Linkedin</span>
-            <icon-linkedin width="24" height="24">Linkedin</icon-linkedin>
-          </nuxt-link>
+            <icon-linkedin>Linkedin</icon-linkedin>
+          </a>
+
           <!-- Social Link Instagram -->
-          <nuxt-link to="/" class="text-dark px-2">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="open external link to instagram"
+            class="text-dark px-2 transition duration-300 hover:text-blue"
+          >
             <span class="sr-only">Instagram</span>
-            <icon-instagram width="24" height="24"></icon-instagram>
-          </nuxt-link>
+            <icon-instagram></icon-instagram>
+          </a>
         </div>
-        <!-- Section: Social -->
 
         <!-- Copyright -->
         <div class="text-center mt-4 lg:mt-0">© 2020 Copyright: Nuxt Bot</div>
-        <!-- Copyright -->
       </div>
     </div>
   </footer>
-  <!-- Footer -->
 </template>
 
 <script>
@@ -76,5 +111,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

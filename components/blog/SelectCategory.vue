@@ -9,7 +9,14 @@
     <select
       name="selectCategory"
       id="selectCategory"
-      class="py-3 px-2 w-full block border border-gray-200"
+      class="
+        py-3
+        px-2
+        w-full
+        block
+        border border-gray-200
+        focus:outline-none focus:border-blue
+      "
       v-model="category"
       @change="handleChange"
     >

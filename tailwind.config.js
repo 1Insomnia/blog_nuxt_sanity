@@ -18,6 +18,11 @@ module.exports = {
       },
     },
     extend: {
+      padding: {
+        60: "60px",
+        90: "90px",
+        120: "120px"
+      },
       boxShadow: {
         "inset-1": "inset 0 2px 4px 0 rgb(206 209 224 / 20%)"
       },
@@ -39,29 +44,13 @@ module.exports = {
           light: "#ffffff",
           dark: "c7c7c7",
         },
-        mat: {
-          red: "#F23A2F",
-          pink: "#E61A58",
-          purple: "#9123A6",
-          "deep-purple": "#5C33AE",
-          indigo: "#3748AC",
-          blue: "#1D8BF1",
-          "light-blue": "#009FF2",
-          cyan: "#00B4CE",
-          teal: "#008B7D",
-          green: "#43A547",
-          "light-green": "#80BB41",
-          lime: "#C6D732",
-          yellow: "#FFE734",
-          amber: "#FFB80C",
-          orange: "#FF8D05",
-          "deep-orange": "#FF4C1F",
-          brow: "#6E4B3F",
-          grey: "#949393",
-          "grey-light": "#F0F0F0",
-          "blue-grey": "#567280",
-          black: "#000000",
-          white: "#FFFFFF",
+        blue: {
+          DEFAULT: "#1D8BF1",
+          light: "#009FF2",
+        },
+        green: {
+          DEFAULT: "#43A547",
+          light: "#80BB41"
         },
         accent: {
           DEFAULT: "#162125",

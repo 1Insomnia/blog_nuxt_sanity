@@ -12,7 +12,7 @@
     <!-- Post Card Wrapper + Loop -->
 
     <!-- Post Card No Articles Loaded -->
-    <div v-else class="text-mat-red font-bold">Oops No Articles!</div>
+    <div v-else class="text-blue font-bold">Oops No Articles!</div>
     <!-- Post Card No Articles Loaded -->
   </div>
   <!-- Post Card List Outter Wrapper -->

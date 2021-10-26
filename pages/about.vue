@@ -1,12 +1,12 @@
 <template>
-  <section class="py-8 md:py-12 lg:py-16">
+  <section class="py-60 md:py-90 lg:py-120">
     <div class="container max-w-screen-md">
       <h1 class="heading-1 mb-10">About Me</h1>
       <div class="">
         <image-text-display
           imageName="about-1.jpg"
           imageAlt="Alternative image"
-          title="Traveling to Algeria"
+          title="nam veritatis corporis"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
           ducimus, atque voluptate natus quidem odit saepe minus, delectus nemo

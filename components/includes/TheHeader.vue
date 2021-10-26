@@ -81,23 +81,26 @@
                     rounded-md
                     text-sm
                     uppercase
-                    font-medium
+                    relative
+                    nav-link
                   "
                   aria-current="page"
+                  aria-label="open internal link to home page"
                   >Home</nuxt-link
                 >
                 <nuxt-link
                   to="/blog"
                   class="
                     text-foreground
-                    hover:text-foreground-dark
                     px-3
                     py-2
                     rounded-md
                     text-sm
                     uppercase
-                    font-medium
+                    relative
+                    nav-link
                   "
+                  aria-label="open internal link to blog page"
                   >Blog</nuxt-link
                 >
 
@@ -105,28 +108,30 @@
                   to="/about"
                   class="
                     text-foreground
-                    hover:text-foreground-dark
                     px-3
                     py-2
                     rounded-md
                     text-sm
                     uppercase
-                    font-medium
+                    relative
+                    nav-link
                   "
+                  aria-label="open internal link to about page"
                   >About</nuxt-link
                 >
                 <nuxt-link
                   to="/contact"
                   class="
                     text-foreground
-                    hover:text-foreground-dark
                     px-3
                     py-2
                     rounded-md
                     text-sm
-                    font-medium
                     uppercase
+                    relative
+                    nav-link
                   "
+                  aria-label="open internal link to contact page"
                   >Contact</nuxt-link
                 >
               </div>
@@ -155,6 +160,7 @@
               font-medium
             "
             aria-current="page"
+            aria-label="open internal link to home page"
             >Home</nuxt-link
           >
 
@@ -170,6 +176,7 @@
               font-medium
               uppercase
             "
+            aria-label="open internal link to blog page"
             >Blog</nuxt-link
           >
 
@@ -185,6 +192,7 @@
               uppercase
               font-medium
             "
+            aria-label="open internal link to about page"
             >About</nuxt-link
           >
 
@@ -200,6 +208,7 @@
               text-base
               font-medium
             "
+            aria-label="open internal link to contact page"
             >Contact</nuxt-link
           >
         </div>
@@ -236,14 +245,22 @@ export default {
   z-index: 1000;
 }
 
-.overlay {
-  position: fixed;
-  height: 100vh;
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+
+  height: 5px;
   width: 100%;
 
-  z-index: 50;
+  transform: scale(0);
+  transition: all 300ms ease-in;
+  transform-origin: center;
+  background-color: #009ff2;
+}
 
-  top: 0;
-  left: 0;
+.nav-link:hover.nav-link::before {
+  transform: scale(1);
 }
 </style>

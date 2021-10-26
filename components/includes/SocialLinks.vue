@@ -1,24 +1,44 @@
 <template>
   <div class="flex items-center">
-    <nuxt-link to="/" class="text-dark pr-4">
+    <a
+      href="https://www.facebook.com"
+      aria-label="open external link to facebook"
+      target="_blank"
+      class="text-dark pr-4 transition duration-300 hover:text-blue"
+    >
       <span class="sr-only">Facebook</span>
-      <icon-facebook width="24" height="24"></icon-facebook>
-    </nuxt-link>
+      <icon-facebook></icon-facebook>
+    </a>
     <!-- Social Link Twitter -->
-    <nuxt-link to="/" class="text-dark px-4">
+    <a
+      href="https://twitter.com"
+      aria-label="open external link to twitter"
+      target="_blank"
+      class="text-dark px-4 transition duration-300 hover:text-blue"
+    >
       <span class="sr-only">Twitter</span>
-      <icon-twitter width="24" height="24"></icon-twitter>
-    </nuxt-link>
+      <icon-twitter></icon-twitter>
+    </a>
     <!-- Social Link Linkedin -->
-    <nuxt-link to="/" class="text-dark px-4">
+    <a
+      href="https://www.linkedin.com"
+      aria-label="open external link to linkedin"
+      target="_blank"
+      class="text-dark px-4 transition duration-300 hover:text-blue"
+    >
       <span class="sr-only">Linkedin</span>
-      <icon-linkedin width="24" height="24">Linkedin</icon-linkedin>
-    </nuxt-link>
+      <icon-linkedin>Linkedin</icon-linkedin>
+    </a>
     <!-- Social Link Instagram -->
-    <nuxt-link to="/" class="text-dark pl-4">
+    <a
+      href="https://www.instagram.com"
+      aria-label="open external link to instagram"
+      target="_blank"
+      class="text-dark pl-4 transition duration-300 hover:text-blue"
+    >
       <span class="sr-only">Instagram</span>
-      <icon-instagram width="24" height="24"></icon-instagram>
-    </nuxt-link>
+      <icon-instagram></icon-instagram>
+    </a>
   </div>
 </template>
 

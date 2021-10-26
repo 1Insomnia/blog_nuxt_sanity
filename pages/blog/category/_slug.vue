@@ -1,5 +1,5 @@
 <template>
-  <section class="py-8 md:py-12 lg:py-16">
+  <section class="py-60 md:py-90 lg:py-120">
     <div class="container lg:max-w-80-ch">
       <h1 class="mb-10">Category : {{ title }}</h1>
       <ArticleCardList :articles="articles" />

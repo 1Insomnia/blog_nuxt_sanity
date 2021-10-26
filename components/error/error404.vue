@@ -3,7 +3,7 @@
     <div class="container">
       <div class="">
         <!-- Image Container -->
-        <h1 class="text-center md:hidden text-mat-blue">404</h1>
+        <h1 class="text-center md:hidden text-blue">404</h1>
         <div class="hidden md:block md:mb-10">
           <img
             class="object-fit max-w-lg bg-background mx-auto"
@@ -19,7 +19,7 @@
           <!-- Link to homepage -->
           <nuxt-link class="block text-center" to="/">
             However we have plenty more content on the
-            <span class="text-mat-blue">homepage</span> !
+            <span class="text-blue">homepage</span> !
           </nuxt-link>
         </div>
       </div>
