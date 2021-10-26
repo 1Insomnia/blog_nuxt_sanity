@@ -34,11 +34,27 @@ export default {
     // If articles are fetch then commit to store
     store.commit("setArticles", articles);
   },
+  head() {
+    return {
+      title: "Blog Categories - " + this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "Nuxt Blog, Blog, Travel, Life Style",
+        },
+      ],
+    };
+  },
   computed: {
     ...mapGetters(["articles"]),
     // Return title of the category
     title() {
-      return this.articles[0].categories[0].title;
+      if (this.articles[0].categories[0].title) {
+        return this.articles[0].categories[0].title;
+      }
+      return "";
     },
   },
   methods: {

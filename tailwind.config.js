@@ -1,14 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  purge: [],
-  //   purge: [
-  //   './components/**/*.{vue,js}',
-  //   './layouts/**/*.vue',
-  //   './pages/**/*.vue',
-  //   './plugins/**/*.{js,ts}',
-  //   './nuxt.config.{js,ts}',
-  // ],
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
@@ -47,10 +46,6 @@ module.exports = {
         blue: {
           DEFAULT: "#1D8BF1",
           light: "#009FF2",
-        },
-        green: {
-          DEFAULT: "#43A547",
-          light: "#80BB41"
         },
         accent: {
           DEFAULT: "#162125",

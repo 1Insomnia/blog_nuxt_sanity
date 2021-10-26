@@ -33,6 +33,19 @@ export default {
     store.commit("setArticles", articles);
     store.commit("setCategories", categories);
   },
+  head() {
+    return {
+      title: "Blog Articles",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "Nuxt Blog, Blog, Travel, Life Style",
+        },
+      ],
+    };
+  },
   computed: {
     // Return Articles, Categories, activeCategory from vuex store
     ...mapState(["articles", "categories", "activeCategory"]),

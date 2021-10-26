@@ -42,27 +42,22 @@ export default {
     // Commit data to vuex store
     store.commit("setArticles", articles);
   },
+  head() {
+    return {
+      title: "Home",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "Nuxt Blog, Blog, Travel, Life Style",
+        },
+      ],
+    };
+  },
   computed: {
     // Import articles
-    ...mapGetters(["articles"]),
+    ...mapGetters(["articles", "seoTitles"]),
   },
 };
 </script>
-
-<style scoped>
-#articles {
-  scroll-padding-top: calc(60px + 80px);
-}
-
-@media (min-width: 768px) {
-  #articles {
-    scroll-padding-top: calc(90px + 80px);
-  }
-}
-
-@media (min-width: 1024px) {
-  #articles {
-    scroll-padding-top: calc(120px + 80px);
-  }
-}
-</style>

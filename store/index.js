@@ -44,7 +44,7 @@ export const getters = {
     return state.articles
   },
   // Get All Categories
-  catgories(state) {
+  categories(state) {
     return state.categories
   },
 }

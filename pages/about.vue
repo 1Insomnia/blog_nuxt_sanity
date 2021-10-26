@@ -45,5 +45,18 @@ export default {
   components: {
     ImageTextDisplay,
   },
+  head() {
+    return {
+      title: "About Me",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "Nuxt Blog, Blog, Travel, Life Style",
+        },
+      ],
+    };
+  },
 };
 </script>

@@ -240,27 +240,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-#header {
-  z-index: 1000;
-}
-
-.nav-link::before {
-  content: "";
-  position: absolute;
-  bottom: -22px;
-  left: 0;
-
-  height: 5px;
-  width: 100%;
-
-  transform: scale(0);
-  transition: all 300ms ease-in;
-  transform-origin: center;
-  background-color: #009ff2;
-}
-
-.nav-link:hover.nav-link::before {
-  transform: scale(1);
-}
-</style>
