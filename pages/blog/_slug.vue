@@ -9,7 +9,7 @@
       </div>
       <div class="flex items-center text-sm text-light text-foreground-light">
         <span class="block">{{ formatDate(article.publishedAt) }} </span>
-        <span class="block" v-if="article.categories">&nbsp;— &nbsp;</span>
+        <span v-if="article.categories" class="block">&nbsp;— &nbsp;</span>
         <nuxt-link
           v-for="category in article.categories"
           :key="category.title"
@@ -32,25 +32,28 @@
 </template>
 
 <script>
-import { groq } from "@nuxtjs/sanity"
-import { SanityContent } from "@nuxtjs/sanity/dist/components/sanity-content"
+import { groq } from "@nuxtjs/sanity";
+import { SanityContent } from "@nuxtjs/sanity/dist/components/sanity-content";
 
-import { mapGetters } from "vuex"
+import { mapGetters } from "vuex";
 
 export default {
+  components: {
+    SanityContent,
+  },
   async asyncData({ $sanity, params, error, store }) {
     // Query : fetch article by slug
-    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, mainImage, categories[]->{title} }`
+    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]{title, publishedAt , body, mainImage, categories[]->{title} }`;
 
     // Fetch Article
-    const article = await $sanity.fetch(query)
+    const article = await $sanity.fetch(query);
 
     // If No Data Return return 404
     if (Object.entries(article).length === 0 && params.slug !== undefined) {
       return error({
         statusCode: 404,
         message: `Post ${params.slug} not found`,
-      })
+      });
     }
 
     // Set Article in store
@@ -60,20 +63,17 @@ export default {
       categories: article.categories,
       publishedAt: article.publishedAt,
       image: article.mainImage,
-    })
-  },
-  components: {
-    SanityContent,
-  },
-  methods: {
-    formatDate(date) {
-      if (!date) return ""
-      const options = { year: "numeric", month: "long", day: "numeric" }
-      return new Date(date).toLocaleDateString("en", options)
-    },
+    });
   },
   computed: {
     ...mapGetters(["article"]),
   },
-}
+  methods: {
+    formatDate(date) {
+      if (!date) return "";
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
+  },
+};
 </script>

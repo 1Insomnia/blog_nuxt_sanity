@@ -4,8 +4,8 @@
       <h1 class="heading-1 mb-10">About Me</h1>
       <div class="">
         <image-text-display
-          imageName="about-1.jpg"
-          imageAlt="Alternative image"
+          image-name="about-1.jpg"
+          image-alt="Alternative image"
           title="nam veritatis corporis"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
@@ -14,8 +14,8 @@
           adipisci quasi.
         </image-text-display>
         <image-text-display
-          imageName="about-2.jpg"
-          imageAlt="Alternative image"
+          image-name="about-2.jpg"
+          image-alt="Alternative image"
           title="atque voluptate"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
@@ -24,8 +24,8 @@
           adipisci quasi.
         </image-text-display>
         <image-text-display
-          imageName="about-3.jpg"
-          imageAlt="Alternative image"
+          image-name="about-3.jpg"
+          image-alt="Alternative image"
           title="Dolor Sit Amet"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
@@ -39,11 +39,11 @@
 </template>
 
 <script>
-import ImageTextDisplay from "@/components/includes/ImageTextDisplay.vue"
+import ImageTextDisplay from "@/components/includes/ImageTextDisplay.vue";
 
 export default {
   components: {
     ImageTextDisplay,
   },
-}
+};
 </script>

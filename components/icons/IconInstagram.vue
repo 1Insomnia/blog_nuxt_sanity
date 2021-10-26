@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: "i-instagram",
-}
+  name: "IInstagram",
+};
 </script>

@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: "i-twitter",
-}
+  name: "ITwitter",
+};
 </script>

@@ -3,7 +3,7 @@
     <!-- Hero Components -->
     <Hero />
     <!-- Section displaying latest article -->
-    <section class="py-60 md:py-90 lg:py-120" id="articles">
+    <section id="articles" class="py-60 md:py-90 lg:py-120">
       <div class="container lg:max-w-screen-md">
         <h2 class="mb-10 text-center">Latest Articles</h2>
         <div class="text-center">
@@ -20,34 +20,33 @@
   </div>
 </template>
 <script>
-import { groq } from "@nuxtjs/sanity"
+import { groq } from "@nuxtjs/sanity";
+import { mapGetters } from "vuex";
 
-import Hero from "@/components/includes/Hero.vue"
-import ArticleCardList from "~/components/blog/ArticleCardList.vue"
-
-import { mapGetters } from "vuex"
+import Hero from "@/components/includes/Hero.vue";
+import ArticleCardList from "~/components/blog/ArticleCardList.vue";
 
 export default {
+  components: {
+    ArticleCardList,
+    Hero,
+  },
   async asyncData({ $sanity, store }) {
     // Store groq query inside variable
     // Fetch all the last document which type = post and return 10 last
-    const query = groq`*[_type == "post" ][0...10] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`
+    const query = groq`*[_type == "post" ][0...10] | order(_createdAt desc){ title, slug, exercpt, publishedAt, categories[]->{title, slug} }`;
 
     // Fetch articles
-    const articles = await $sanity.fetch(query)
+    const articles = await $sanity.fetch(query);
 
     // Commit data to vuex store
-    store.commit("setArticles", articles)
+    store.commit("setArticles", articles);
   },
   computed: {
     // Import articles
     ...mapGetters(["articles"]),
   },
-  components: {
-    ArticleCardList,
-    Hero,
-  },
-}
+};
 </script>
 
 <style scoped>

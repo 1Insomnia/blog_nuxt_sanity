@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import PostCard from "~/components/blog/ArticleCard.vue"
+import PostCard from "~/components/blog/ArticleCard.vue";
 
 export default {
   components: {
@@ -31,5 +31,5 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>

@@ -35,9 +35,9 @@
     <!-- Post Card Category -->
     <div>
       <h4
-        class="text-gray-700"
         v-for="category in article.categories"
         :key="category.title"
+        class="text-gray-700"
       >
         <nuxt-link
           :to="{
@@ -95,9 +95,9 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const options = { year: "numeric", month: "long", day: "numeric" }
-      return new Date(date).toLocaleDateString("en", options)
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
     },
   },
-}
+};
 </script>

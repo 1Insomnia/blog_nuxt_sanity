@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 left-0 w-full shadow-lg" id="header">
+  <header id="header" class="fixed top-0 left-0 w-full shadow-lg">
     <nav class="bg-background-light">
       <div class="container">
         <div class="relative flex items-center justify-between h-20">
@@ -8,7 +8,6 @@
             <!-- Mobile menu button-->
             <button
               type="button"
-              @click.prevent="toggleNav"
               class="
                 inline-flex
                 items-center
@@ -21,6 +20,7 @@
               "
               aria-controls="mobile-menu"
               aria-expanded="false"
+              @click.prevent="toggleNav"
             >
               <svg
                 class="h-6 w-6"
@@ -223,22 +223,22 @@ export default {
   data() {
     return {
       showMenu: false,
-    }
+    };
   },
   watch: {
     $route() {
-      this.showMenu = false
+      this.showMenu = false;
     },
   },
   methods: {
     toggleNav() {
-      this.showMenu = !this.showMenu
+      this.showMenu = !this.showMenu;
     },
     closeNav() {
-      this.showMenu = false
+      this.showMenu = false;
     },
   },
-}
+};
 </script>
 <style scoped>
 #header {

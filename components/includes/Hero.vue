@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import SocialLinks from "@/components/includes/SocialLinks.vue"
+import SocialLinks from "@/components/includes/SocialLinks.vue";
 
 export default {
   name: "Hero",
   components: {
     SocialLinks,
   },
-}
+};
 </script>

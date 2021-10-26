@@ -13,6 +13,7 @@
         Full Name
       </label>
       <input
+        id="fullName"
         class="
           appearance-none
           outline-none
@@ -29,7 +30,6 @@
         "
         name="fullName"
         type="text"
-        id="fullName"
         placeholder="What's your fullname ?"
         autofocus
       />
@@ -41,6 +41,7 @@
         Email
       </label>
       <input
+        id="email"
         class="
           appearance-none
           outline-none
@@ -56,7 +57,6 @@
           focus:border-blue
         "
         type="email"
-        id="email"
         placeholder="you@example.com"
       />
     </div>
@@ -67,6 +67,7 @@
         Message
       </label>
       <textarea
+        id="message"
         class="
           appearance-none
           outline-none
@@ -83,7 +84,6 @@
           focus:border-blue
           min-h-120
         "
-        id="message"
         placeholder="Your message"
       ></textarea>
     </div>
@@ -117,5 +117,5 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

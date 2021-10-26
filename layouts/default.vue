@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import TheHeader from "~/components/includes/TheHeader"
-import TheFooter from "~/components/includes/TheFooter"
+import TheHeader from "~/components/includes/TheHeader";
+import TheFooter from "~/components/includes/TheFooter";
 
 export default {
   components: {
@@ -22,7 +22,7 @@ export default {
     name: "layout",
     mode: "out-in",
   },
-}
+};
 </script>
 
 <style scoped>

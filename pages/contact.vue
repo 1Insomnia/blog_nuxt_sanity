@@ -91,13 +91,13 @@
 </template>
 
 <script>
-import ContactForm from "@/components/includes/ContactForm.vue"
-import SocialLinks from "@/components/includes/SocialLinks.vue"
+import ContactForm from "@/components/includes/ContactForm.vue";
+import SocialLinks from "@/components/includes/SocialLinks.vue";
 
 export default {
   components: {
     ContactForm,
     SocialLinks,
   },
-}
+};
 </script>

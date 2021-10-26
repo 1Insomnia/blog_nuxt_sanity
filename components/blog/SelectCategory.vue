@@ -7,8 +7,9 @@
       Filter by categories
     </label>
     <select
-      name="selectCategory"
       id="selectCategory"
+      v-model="category"
+      name="selectCategory"
       class="
         py-3
         px-2
@@ -17,16 +18,11 @@
         border border-gray-200
         focus:outline-none focus:border-blue
       "
-      v-model="category"
       @change="handleChange"
     >
       <option value="all">All</option>
-      <option
-        :value="category.title"
-        v-for="category in categories"
-        :key="category.title"
-      >
-        {{ category.title }}
+      <option v-for="c in categories" :key="c.title" :value="c.title">
+        {{ c.title }}
       </option>
     </select>
   </div>
@@ -34,11 +30,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      category: "all",
-    }
-  },
   name: "SelectCategory",
   props: {
     categories: {
@@ -46,15 +37,20 @@ export default {
       required: true,
     },
   },
-  methods: {
-    handleChange() {
-      this.$store.commit("setActiveCategory", this.category)
-    },
+  data() {
+    return {
+      category: "all",
+    };
   },
   watch: {
     $route() {
-      this.category = "all"
+      this.category = "all";
     },
   },
-}
+  methods: {
+    handleChange() {
+      this.$store.commit("setActiveCategory", this.category);
+    },
+  },
+};
 </script>

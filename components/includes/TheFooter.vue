@@ -97,10 +97,10 @@
 </template>
 
 <script>
-import IconTwitter from "@/components/icons/IconTwitter.vue"
-import IconFacebook from "@/components/icons/IconFacebook.vue"
-import IconInstagram from "@/components/icons/IconInstagram.vue"
-import IconLinkedin from "@/components/icons/IconLinkedin.vue"
+import IconTwitter from "@/components/icons/IconTwitter.vue";
+import IconFacebook from "@/components/icons/IconFacebook.vue";
+import IconInstagram from "@/components/icons/IconInstagram.vue";
+import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 
 export default {
   components: {
@@ -109,5 +109,5 @@ export default {
     IconLinkedin,
     IconInstagram,
   },
-}
+};
 </script>

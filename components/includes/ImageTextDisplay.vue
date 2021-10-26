@@ -15,20 +15,29 @@
 <script>
 export default {
   props: {
-    imageName: String,
-    imageAlt: String,
-    title: String,
+    imageName: {
+      type: String,
+      required: true,
+    },
+    imageAlt: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
   },
   computed: {
     imageAltText() {
       if (this.imageName !== "") {
-        return this.imageAlt
+        return this.imageAlt;
       }
-      return this.imageName + " picture"
+      return this.imageName + " picture";
     },
     imageSource() {
-      return require(`~/assets/img/about/${this.imageName}`)
+      return require(`~/assets/img/about/${this.imageName}`);
     },
   },
-}
+};
 </script>
