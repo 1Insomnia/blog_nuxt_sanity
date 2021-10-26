@@ -14,7 +14,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "20px",
+        DEFAULT: "24px",
       },
     },
     extend: {
@@ -64,6 +64,7 @@ module.exports = {
           white: "#FFFFFF",
         },
         accent: {
+          DEFAULT: "#162125",
           1: "#eaeaea"
         }
       },

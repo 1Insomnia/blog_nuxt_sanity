@@ -2,7 +2,7 @@
   <section class="py-8 md:py-12 lg:py-16">
     <h1 class="mb-10 text-center">Latest Articles</h1>
     <SelectCategory :categories="categories" />
-    <AritcleCardList :articles="articles" />
+    <ArticleCardList :articles="articles" />
   </section>
 </template>
 

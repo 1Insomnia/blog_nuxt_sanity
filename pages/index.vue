@@ -1,7 +1,7 @@
 <template>
   <div class="home-wrapper">
     <Hero />
-    <section class="py-8 md:py-12 lg:py-16" id="articles">
+    <section class="py-8 md:py-12 lg:py-16 my-0" id="articles">
       <div class="container lg:max-w-screen-md">
         <h2 class="mb-10 text-center">Latest Articles</h2>
         <div class="text-lg text-grey-darkest leading-normal spaced-y-6">
@@ -45,3 +45,4 @@ export default {
   },
 }
 </script>
+<style scoped></style>

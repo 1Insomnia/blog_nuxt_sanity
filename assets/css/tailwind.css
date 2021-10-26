@@ -26,9 +26,6 @@
 
 @layer base {
   /* Better Scroll Behavior */
-  html {
-    scroll-behavior: smooth;
-  }
 
   h1,
   h2,

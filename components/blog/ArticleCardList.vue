@@ -2,7 +2,7 @@
   <!-- Post Card List Outter Wrapper -->
   <div class="container lg:max-w-screen-md">
     <!-- Post Card Wrapper + Loop -->
-    <div v-if="articles" class="space-y-10 mt-12">
+    <div v-if="articles">
       <PostCard
         v-for="article in articles"
         :key="article.id"
@@ -12,7 +12,7 @@
     <!-- Post Card Wrapper + Loop -->
 
     <!-- Post Card No Articles Loaded -->
-    <div v-else class="text-mat-red font-bold">No Articles!</div>
+    <div v-else class="text-mat-red font-bold">Oops No Articles!</div>
     <!-- Post Card No Articles Loaded -->
   </div>
   <!-- Post Card List Outter Wrapper -->

@@ -10,6 +10,12 @@
       duration-200
       ease-linear
       hover:shadow-xl hover:-translate-y-2
+      my-4
+      md:my-8
+      lg:my-12
+      rounded
+      overflow-hidden
+      border border-accent-1
     "
   >
     <!-- Post Card  Title + Dynamic Link -->

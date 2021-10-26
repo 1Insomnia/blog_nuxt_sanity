@@ -1,41 +1,49 @@
 <template>
   <section class="py-8 md:py-12 lg:py-16">
-    <div class="container">
-      <h1 class="heading-1 mb-10">About</h1>
-      <div class="lg:flex lg:gap-12">
-        <div class="mb-12 lg:mb-0 lg:w-1/2">
-          <p class="mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id
-            laudantium, placeat iure odit adipisci, sapiente, doloribus
-            voluptatum explicabo eum culpa dolorum rem ipsum? Facere animi
-            repellat ab accusantium recusandae!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-            facilis praesentium. A, deleniti delectus aperiam eos ipsam tempore
-            sequi earum.
-          </p>
-        </div>
-        <div class="lg:w-1/2">
-          <p class="mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id
-            laudantium, placeat iure odit adipisci, sapiente, doloribus
-            voluptatum explicabo eum culpa dolorum rem ipsum? Facere animi
-            repellat ab accusantium recusandae!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-            facilis praesentium. A, deleniti delectus aperiam eos ipsam tempore
-            sequi earum.
-          </p>
-        </div>
+    <div class="container max-w-screen-md">
+      <h1 class="heading-1 mb-10">About Me</h1>
+      <div class="">
+        <image-text-display
+          imageName="about-1.jpg"
+          imageAlt="Alternative image"
+          title="Traveling to Algeria"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
+          ducimus, atque voluptate natus quidem odit saepe minus, delectus nemo
+          pariatur ratione placeat! Porro, nam veritatis corporis quibusdam
+          adipisci quasi.
+        </image-text-display>
+        <image-text-display
+          imageName="about-2.jpg"
+          imageAlt="Alternative image"
+          title="atque voluptate"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
+          ducimus, atque voluptate natus quidem odit saepe minus, delectus nemo
+          pariatur ratione placeat! Porro, nam veritatis corporis quibusdam
+          adipisci quasi.
+        </image-text-display>
+        <image-text-display
+          imageName="about-3.jpg"
+          imageAlt="Alternative image"
+          title="Dolor Sit Amet"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, ipsum
+          ducimus, atque voluptate natus quidem odit saepe minus, delectus nemo
+          pariatur ratione placeat! Porro, nam veritatis corporis quibusdam
+          adipisci quasi.
+        </image-text-display>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {}
-</script>
+import ImageTextDisplay from "@/components/includes/ImageTextDisplay.vue"
 
-<style></style>
+export default {
+  components: {
+    ImageTextDisplay,
+  },
+}
+</script>

@@ -65,9 +65,9 @@
             "
           >
             <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center font-bold">
+            <nuxt-link to="/" class="flex-shrink-0 flex items-center font-bold">
               Nux Blog
-            </div>
+            </nuxt-link>
             <!-- Nav Desktop -->
             <div class="hidden sm:block sm:ml-6">
               <div class="flex space-x-4">

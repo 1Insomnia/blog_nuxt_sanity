@@ -102,6 +102,11 @@
           text-white text-sm
           rounded
           w-full
+          border border-mat-blue
+          transition
+          duration-300
+          ease-in
+          hover:bg-white hover:text-mat-blue
         "
       >
         Send Message
@@ -112,45 +117,5 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    firstName: {
-      get() {
-        return this.$store.state.emailInfos.firstName
-      },
-      set(value) {
-        return this.$store.commit("setFirstName", value)
-      },
-    },
-    lastName: {
-      get() {
-        return this.$store.state.emailInfos.lastName
-      },
-      set(value) {
-        return this.$store.commit("setLastName", value)
-      },
-    },
-    email: {
-      get() {
-        return this.$store.state.emailInfos.email
-      },
-      set(value) {
-        return this.$store.commit("setEmail", value)
-      },
-    },
-    message: {
-      get() {
-        return this.$store.state.emailInfos.message
-      },
-      set(value) {
-        return this.$store.commit("setMessage", value)
-      },
-    },
-  },
-  methods: {
-    handleSubmit() {
-      console.log(this.$store.state.emailInfos)
-    },
-  },
-}
+export default {}
 </script>
