@@ -47,7 +47,6 @@ export default {
 
     // Fetch Article
     const article = await $sanity.fetch(query);
-    console.log($sanity.config);
 
     // If No Data Return return 404
     if (Object.entries(article).length === 0 && params.slug !== undefined) {

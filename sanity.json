@@ -1,7 +1,6 @@
 {
-  "privateRuntimeConfig": {
-    "sanity": {
-      "token": "process.env.SANITY_TOKEN"
-    }
+  "api": {
+    "projectId": "zvsv2daw",
+    "dataset": "production"
   }
 }
